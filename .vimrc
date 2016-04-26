@@ -239,5 +239,5 @@ noremap <C-K> <C-W>k
 noremap <C-H> <C-W>h
 noremap <C-L> <C-W>l
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+au BufReadPre   *.v match OverLength /\%81v.\+/
 set hlsearch
