@@ -241,3 +241,15 @@ noremap <C-L> <C-W>l
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 au BufReadPre   *.v match OverLength /\%81v.\+/
 set hlsearch
+
+" The Silver Searcher
+if executable('ag')
+"Use ag over grep
+    set grepprg=ag\ --nogroup\ --nocolor
+    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    " ag is fast enough that CtrlP doesn't need to cache
+    let g:ctrlp_use_caching = 0
+endif
+" ex: grep cabac h265 --cpp
+" ex: grep capture --verilog --vhdl
