@@ -1,0 +1,7 @@
+[url "https://"]
+    insteadOf = git://
+[url "https://github.com/qemu"]
+    insteadOf = git://git.qemu-project.org
+[url "https://anongit.freedesktop.org/git/pixman.git"]
+    insteadOf = git://anongit.freedesktop.org/pixman
+    
